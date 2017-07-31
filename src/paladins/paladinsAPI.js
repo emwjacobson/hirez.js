@@ -18,11 +18,11 @@ class Paladins {
     this.paladinsUrl = API[platform.toUpperCase()]
     this.platform = platform.toUpperCase()
     this.session = new SessionAPI(this.paladinsUrl, this.devId, this.authKey, `paladins${this.platform}`)
-    this.session.test().then(tested => {
-      if (tested && (tested.startsWith('Invalid session id.') || !this.session.exitsts())) {
-        this.session.generate()
-      }
-    })
+    // this.session.test().then(tested => {
+    //   if (tested && (tested.startsWith('Invalid session id.') || !this.session.exitsts())) {
+    //     this.session.generate()
+    //   }
+    // })
   }
 
   getFriends (userName) {
