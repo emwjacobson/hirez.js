@@ -129,6 +129,7 @@ Get League Leaderboard
 ```javascript
 hirez.smite('platform').getLeagueLeaderBoard('Queue Id', 'Tier', 'Season')
 ```
+
 Get God Leaderboard
 ```javascript
 hirez.smite('platform').getGodLeaderBoard('God Id', 'Queue Id')
@@ -237,6 +238,11 @@ Get Match Details
 hirez.paladins('platform').getMatchDetails('Match Id')
 ```
 
+Get Match IDs by Queue
+```javascript
+hirez.paladins('platform').getMatchIdsByQueue('Queue Id', 'Date', 'Time')
+```
+
 Get Match History
 ```javascript
 hirez.paladins('platform').getMatchHistory('Username')
@@ -250,6 +256,11 @@ hirez.paladins('platform').getPlayer('Username')
 Get Player Status
 ```javascript
 hirez.paladins('platform').getPlayerStatus('Username')
+```
+
+Get Queue Status
+```javascript
+hirez.paladins('platform').getQueueStats('Username', 'Queue Id')
 ```
 
 Get Player Achievements
