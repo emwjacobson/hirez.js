@@ -238,6 +238,11 @@ Get Match Details
 hirez.paladins('platform').getMatchDetails('Match Id')
 ```
 
+Get Match Details Batch
+```javascript
+hirez.smite('platform').getMatchDetailsBatch([matchid1, matchid2, ...])
+```
+
 Get Match IDs by Queue
 ```javascript
 hirez.paladins('platform').getMatchIdsByQueue('Queue Id', 'Date', 'Time')

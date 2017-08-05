@@ -129,6 +129,20 @@ class Smite {
     })
   }
 
+  getMatchDetailsBatch (matches) {
+    matches = matches.join(', ')
+    let url = util.genUrl(this.smiteUrl, 'getmatchdetailsbatch', this.devId, this.authKey, process.env[`SMITE_${this.platform}_SESSION`]) + '/' + matchId
+    return new Promise(function (resolve, reject) {
+      request(url, (error, response, body) => {
+        if (!error && response.statusCode === 200) {
+          resolve(JSON.parse(body))
+        } else {
+          reject(error)
+        }
+      })
+    })
+  }
+
   getMatchPlayerDetails (matchId) {
     let url = util.genUrl(this.smiteUrl, 'getmatchplayerdetails', this.devId, this.authKey, process.env[`SMITE_${this.platform}_SESSION`]) + '/' + matchId
     return new Promise(function (resolve, reject) {
