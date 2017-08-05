@@ -105,7 +105,7 @@ class Paladins {
 
   getMatchDetailsBatch (matches) {
     matches = matches.join(', ')
-    let url = util.genUrl(this.paladinsUrl, 'getmatchdetailsbatch', this.devId, this.authKey, process.env[`PALADINS_${this.platform}_SESSION`]) + '/' + matchId
+    let url = util.genUrl(this.paladinsUrl, 'getmatchdetailsbatch', this.devId, this.authKey, process.env[`PALADINS_${this.platform}_SESSION`]) + '/' + matches
     return new Promise(function (resolve, reject) {
       request(url, (error, response, body) => {
         if (!error && response.statusCode === 200) {
